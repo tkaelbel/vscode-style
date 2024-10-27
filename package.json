@@ -1,0 +1,77 @@
+{
+	"name": "vscode-style",
+	"displayName": "vscode-style",
+	"description": "vscode-style load css and js to customize your vscode",
+	"version": "1.0.0",
+	"publisher": "tkaelbel",
+	"engines": {
+		"vscode": "^1.93.0"
+	},
+	"categories": [
+		"Other",
+		"Themes"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tkaelbel/vscode-style"
+	},
+	"bugs": {
+		"url": "https://github.com/tkaelbel/vscode-style/issues"
+	},
+	"preview": true,
+	"icon": "images/logo.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.installVSCodeStyle",
+				"title": "Enable vscode-style"
+			},
+			{
+				"command": "extension.uninstallVSCodeStyle",
+				"title": "Disable vscode-style"
+			},
+			{
+				"command": "extension.updateVSCodeStyle",
+				"title": "Reload vscode-style"
+			}
+		],
+		"configuration": {
+			"title": "vscode-style Configuration",
+			"properties": {
+				"vscode-style.classes": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "string",
+						"description": "value of css class to override"
+					},
+					"default": [],
+					"description": "Custom css classes, as an array of string"
+				},
+				"vscode-style.js": {
+					"type": "array",
+					"default": [],
+					"description": "Custom js scripts, as an array of string"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"eslint": "^8.21.0",
+		"eslint-config-prettier": "^8.5.0"
+	},
+	"dependencies": {
+		"file-url": "^3.0.0",
+		"node-fetch": "^2.0.0",
+		"uuid": "^8.3.2"
+	},
+	"extensionKind": [
+		"ui"
+	],
+	"scripts": {
+		"vscode:prepublish": "npx -y rimraf node_modules && npm install --prod"
+	}
+}
