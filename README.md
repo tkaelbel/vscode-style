@@ -19,7 +19,24 @@ https://github.com/glennraya/vscode-settings-json
 
 ## Getting Started
 
-1. Install this extension.
+1. Install this extension via the `vscode-style-1.0.0.vsix` file.
+
+```bash
+Go to the Extensions view.
+Click Views and More Actions...
+Select Install from VSIX...
+```
+
+or
+
+```bash
+# if you use VS Code
+code --install-extension vscode-style-1.0.0.vsix
+
+# if you use VS Code Insiders
+code-insiders --install-extension vscode-style-1.0.0.vsix
+
+```
 
 2. Add to `settings.json`:
 
@@ -42,7 +59,7 @@ https://github.com/glennraya/vscode-settings-json
 
 As you know to access the command palette and introduce commands you can use **_F1_** (all OSes), **_Ctrl+Shift+P_** (Windows & Linux) or **_Cmd+Shift+P_** (OS X).
 
--   **_Enable vscode-style_**: It enables css in “`vscode-style.css`” and js in“`vscode-style.js`”.
+-   **_Enable vscode-style_**: It enables css in `vscode-style.css` and js in `vscode-style.js`.
 -   **_Disable vscode-style_**: It will disable vscode-style.
 -   **_Reload vscode-style_**: Disable and then re-enable it.
 
