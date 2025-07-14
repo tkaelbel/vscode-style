@@ -13,15 +13,15 @@ function activate(context) {
 	}
 
 	const base = path.join(appDir, "vs", "code");
-	let htmlFile = path.join(base, "electron-sandbox", "workbench", "workbench.html");
+	let htmlFile = path.join(base, "electron-browser", "workbench", "workbench.html");
 	if (!fs.existsSync(htmlFile)) {
-		htmlFile = path.join(base, "electron-sandbox", "workbench", "workbench.esm.html");
+		htmlFile = path.join(base, "electron-browser", "workbench", "workbench.esm.html");
 	}
 	if (!fs.existsSync(htmlFile)) {
 		vscode.window.showInformationMessage(msg.unableToLocateVsCodeInstallationPath);
 	}
 	const BackupFilePath = uuid =>
-		path.join(base, "electron-sandbox", "workbench", `workbench.${uuid}.bak-custom-css`);
+		path.join(base, "electron-browser", "workbench", `workbench.${uuid}.bak-custom-css`);
 
 	// ####  main commands ######################################################
 

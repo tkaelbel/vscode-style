@@ -2,7 +2,7 @@
 	"name": "vscode-style",
 	"displayName": "vscode-style",
 	"description": "vscode-style load css and js to customize your vscode",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "tkaelbel",
 	"engines": {
 		"vscode": "^1.93.0"
@@ -60,18 +60,18 @@
 		}
 	},
 	"devDependencies": {
-		"eslint": "^8.21.0",
-		"eslint-config-prettier": "^8.5.0"
+		"eslint": "^9.31.0",
+		"eslint-config-prettier": "^10.1.5"
 	},
 	"dependencies": {
-		"file-url": "^3.0.0",
-		"node-fetch": "^2.0.0",
-		"uuid": "^8.3.2"
+		"file-url": "^4.0.0",
+		"node-fetch": "^3.3.2",
+		"uuid": "^11.1.0"
 	},
 	"extensionKind": [
 		"ui"
 	],
 	"scripts": {
-		"vscode:prepublish": "npx -y rimraf node_modules && npm install --prod"
+		"vscode:prepublish": "npx -y rimraf node_modules && npm install --omit=prod"
 	}
 }
